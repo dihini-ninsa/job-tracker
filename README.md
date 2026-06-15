@@ -7,15 +7,7 @@ A full-stack web application that helps students and fresh graduates manage thei
 ## 🌐 Live Demo
 
 > Coming soon — deployment in progress
-
----
-
-## 📸 Screenshots
-
-| Home Page | Dashboard | AI Analyzer |
-|-----------|-----------|-------------|
-| ![Home](screenshots/home.png) | ![Dashboard](screenshots/dashboard.png) | ![Analyzer](screenshots/analyzer.png) |
-
+> 
 ---
 
 ## ✨ Features
