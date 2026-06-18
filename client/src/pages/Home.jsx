@@ -281,7 +281,7 @@ export default function Home() {
             <div style={{ fontSize: 11, fontWeight: 700, color: '#7c3aed', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>Features</div>
             <h2 style={{ fontSize: 32, fontWeight: 800, color: text, marginBottom: 16 }}>Everything you need to land the job</h2>
             <p style={{ color: subtext, maxWidth: 480, margin: '0 auto', fontSize: 14, lineHeight: 1.7 }}>
-              From tracking applications to AI-powered resume feedback — JobTracker has all the tools to supercharge your job search.
+              From tracking applications to AI-powered resume feedback JobTracker has all the tools to supercharge your job search.
             </p>
           </div>
 
