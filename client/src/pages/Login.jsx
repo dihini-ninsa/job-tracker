@@ -34,13 +34,33 @@ export default function Login() {
       <div style={{
         width: '45%', display: 'flex', alignItems: 'center',
         justifyContent: 'center', padding: '48px 40px',
-        background: '#0f1117', flexShrink: 0
+        background: '#0f1117', flexShrink: 0, position: 'relative'
       }}>
+        {/* Home Button - Top Left */}
+        <Link
+          to="/"
+          style={{
+            position: 'absolute',
+            top: 32,
+            left: 40,
+            color: '#94a3b8',
+            textDecoration: 'none',
+            fontSize: 15,
+            fontWeight: 600,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            zIndex: 10
+          }}
+        >
+          ← Home
+        </Link>
+
         <div style={{ width: '100%', maxWidth: 400 }}>
 
           <div style={{ marginBottom: 32 }}>
             <div style={{ fontSize: 22, fontWeight: 800, color: '#7c3aed', marginBottom: 6 }}>JobTracker</div>
-            <p style={{ color: '#6b7280', fontSize: 13 }}>Welcome back — sign in to continue</p>
+            <p style={{ color: '#6b7280', fontSize: 13 }}>Welcome back Sign in to continue</p>
           </div>
 
           <div style={{ background: '#1a1d27', border: '1px solid #2d3149', borderRadius: 18, padding: 32 }}>
@@ -58,7 +78,7 @@ export default function Login() {
                 <label style={{ fontSize: 12, color: '#9ca3af', fontWeight: 600, display: 'block', marginBottom: 6 }}>Email address</label>
                 <input
                   type="email" name="email" value={form.email} onChange={handleChange}
-                  placeholder="dg@gmail.com" required
+                  placeholder="youremail@.com" required
                   style={{ width: '100%', background: '#111827', border: '1px solid #374151', color: '#ffffff', borderRadius: 10, padding: '10px 16px', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
                 />
               </div>
@@ -81,7 +101,7 @@ export default function Login() {
 
             <p style={{ textAlign: 'center', color: '#6b7280', fontSize: 13, marginTop: 20 }}>
               Don't have an account?{' '}
-              <Link to="/register" style={{ color: '#a78bfa', textDecoration: 'none', fontWeight: 600 }}>Register free</Link>
+              <Link to="/register" style={{ color: '#a78bfa', textDecoration: 'none', fontWeight: 600 }}>Register here</Link>
             </p>
             <div style={{ textAlign: 'center', marginTop: 12, paddingTop: 12, borderTop: '1px solid #2d3149' }}>
               <a href="/admin-login" style={{ color: 'rgba(251,191,36,0.6)', fontSize: 12, textDecoration: 'none' }}>🛡️ Admin portal</a>
@@ -104,12 +124,10 @@ export default function Login() {
 
       {/* Right — Full image */}
       <div style={{ flex: 1, position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
-        {/* Gradient fallback */}
         <div style={{
           position: 'absolute', inset: 0,
           background: 'linear-gradient(135deg, #1a1040 0%, #2d1b69 40%, #4c1d95 70%, #1e1b4b 100%)'
         }} />
-        {/* Photo */}
         <img
           src="/login-bg.png"
           alt="Team collaborating"
@@ -120,12 +138,10 @@ export default function Login() {
           }}
           onError={(e) => { e.target.style.display = 'none' }}
         />
-        {/* Bottom overlay for card readability */}
         <div style={{
           position: 'absolute', bottom: 0, left: 0, right: 0, height: '50%',
           background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%)'
         }} />
-        {/* Info card */}
         <div style={{ position: 'absolute', bottom: 32, left: 32, right: 32 }}>
           <div style={{
             background: 'rgba(17,24,39,0.80)', backdropFilter: 'blur(16px)',
