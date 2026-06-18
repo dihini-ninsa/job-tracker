@@ -34,8 +34,28 @@ export default function Register() {
       <div style={{
         width: '45%', display: 'flex', alignItems: 'center',
         justifyContent: 'center', padding: '48px 40px',
-        background: '#0f1117', flexShrink: 0
+        background: '#0f1117', flexShrink: 0, position: 'relative'
       }}>
+        {/* Home Button - Top Left */}
+        <Link
+          to="/"
+          style={{
+            position: 'absolute',
+            top: 32,
+            left: 40,
+            color: '#94a3b8',
+            textDecoration: 'none',
+            fontSize: 15,
+            fontWeight: 600,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            zIndex: 10
+          }}
+        >
+          ← Home
+        </Link>
+
         <div style={{ width: '100%', maxWidth: 420 }}>
 
           <div style={{ marginBottom: 28 }}>
@@ -58,7 +78,7 @@ export default function Register() {
                 <label style={{ fontSize: 12, color: '#9ca3af', fontWeight: 600, display: 'block', marginBottom: 6 }}>Full name</label>
                 <input
                   type="text" name="name" value={form.name} onChange={handleChange}
-                  placeholder="Dihini Nihinsa" required
+                  placeholder="Your name" required
                   style={{ width: '100%', background: '#111827', border: '1px solid #374151', color: '#ffffff', borderRadius: 10, padding: '10px 16px', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
                 />
               </div>
@@ -66,7 +86,7 @@ export default function Register() {
                 <label style={{ fontSize: 12, color: '#9ca3af', fontWeight: 600, display: 'block', marginBottom: 6 }}>Email address</label>
                 <input
                   type="email" name="email" value={form.email} onChange={handleChange}
-                  placeholder="dg@gmail.com" required
+                  placeholder="youremail@.com" required
                   style={{ width: '100%', background: '#111827', border: '1px solid #374151', color: '#ffffff', borderRadius: 10, padding: '10px 16px', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
                 />
               </div>
@@ -83,7 +103,7 @@ export default function Register() {
                   <label style={{ fontSize: 12, color: '#9ca3af', fontWeight: 600, display: 'block', marginBottom: 6 }}>University</label>
                   <input
                     type="text" name="university" value={form.university} onChange={handleChange}
-                    placeholder="SLIIT"
+                    placeholder="Your University"
                     style={{ width: '100%', background: '#111827', border: '1px solid #374151', color: '#ffffff', borderRadius: 10, padding: '10px 16px', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
                   />
                 </div>
@@ -91,7 +111,7 @@ export default function Register() {
                   <label style={{ fontSize: 12, color: '#9ca3af', fontWeight: 600, display: 'block', marginBottom: 6 }}>Target role</label>
                   <input
                     type="text" name="targetRole" value={form.targetRole} onChange={handleChange}
-                    placeholder="Data Scientist"
+                    placeholder="Your Role"
                     style={{ width: '100%', background: '#111827', border: '1px solid #374151', color: '#ffffff', borderRadius: 10, padding: '10px 16px', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
                   />
                 </div>
@@ -128,12 +148,10 @@ export default function Register() {
 
       {/* Right — Full image */}
       <div style={{ flex: 1, position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
-        {/* Gradient fallback */}
         <div style={{
           position: 'absolute', inset: 0,
           background: 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)'
         }} />
-        {/* Photo */}
         <img
           src="/register-bg.png"
           alt="Person working"
@@ -144,12 +162,10 @@ export default function Register() {
           }}
           onError={(e) => { e.target.style.display = 'none' }}
         />
-        {/* Bottom overlay */}
         <div style={{
           position: 'absolute', bottom: 0, left: 0, right: 0, height: '45%',
           background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%)'
         }} />
-        {/* Info card */}
         <div style={{ position: 'absolute', bottom: 32, left: 32, right: 32 }}>
           <div style={{
             background: 'rgba(17,24,39,0.80)', backdropFilter: 'blur(16px)',
